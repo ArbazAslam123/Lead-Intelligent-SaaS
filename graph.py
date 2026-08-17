@@ -55,7 +55,7 @@ def researcher_node(state: AgentState) -> dict:
 api_key = os.getenv("GROQ_API_KEY")
 llm = ChatGroq(
     api_key=SecretStr(api_key) if api_key is not None else None, 
-    model="llama-3.3-70b-versatile"  # Used the correct Groq model
+    model="openai/gpt-oss-120b"  # Used the correct Groq model
 )
 
 # Node 2: The Analyst Agent Node
